@@ -29,13 +29,15 @@
    function onLogin(){
     FB.login((Response) => {
         if (response.authResponse) {
-            FB.api('/me?fiels=email,name,picture', (response) =>{
+            FB.api('/me?fields=email,name,picture', (response) =>{
                 console.log(response)
             })
         }
     })
    }
-
+   FB.api('/me', function(response) {
+    console.log(JSON.stringify(response));
+    });
 </script>
 <button onclick="onLogin();">Iniciar Sesion Facebook</button>
 </body>
