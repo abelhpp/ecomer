@@ -27,7 +27,7 @@
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
    function onLogin(){
-    FB.login((Response) => {
+    FB.login((response) => {
         if (response.authResponse) {
             FB.api('/me?fields=email,name,picture', (response) =>{
                 console.log(response)
